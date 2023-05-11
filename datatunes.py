@@ -15,7 +15,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-image=Image.open('STARTER_PACK.jpg')
+image=Image.open('STARTER.png')
 st.image(image,use_column_width=True)
 
 
