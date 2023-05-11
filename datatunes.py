@@ -245,28 +245,29 @@ def creation_onglet():
     with st.form("form 2"):
         with col1:
             danceability_min, danceability_max = genre_bornes_selected['danceability']
-            danceability = st.slider('Danceability : ', danceability_min, danceability_max, (danceability_min, danceability_max), step=0.5)
+            danceability = st.slider('Danceability : ', danceability_min, danceability_max)
             energy_min, energy_max = genre_bornes_selected['energy']
-            energy = st.slider('Energy : ', energy_min, energy_max, (energy_min, energy_max), step=0.5)
+            energy = st.slider('Energy : ', energy_min, energy_max)
             loudness_min, loudness_max = genre_bornes_selected['loudness']
-            loudness = st.slider('Loudness : ', loudness_min, loudness_max, (loudness_min, loudness_max), step=0.5)
+            loudness = st.slider('Loudness : ', loudness_min, loudness_max)
             speechiness_min, speechiness_max = genre_bornes_selected['speechiness']
-            speechiness = st.slider('Speechiness : ', speechiness_min, speechiness_max, (speechiness_min, speechiness_max), step=0.5)
+            speechiness = st.slider('Speechiness : ', speechiness_min, speechiness_max)
             acousticness_min, acousticness_max = genre_bornes_selected['acousticness']
-            acousticness = st.slider('Acousticness : ', acousticness_min, acousticness_max, (acousticness_min, acousticness_max), step=0.5)
+            acousticness = st.slider('Acousticness : ', acousticness_min, acousticness_max)
             st.empty()
         with col2:
             instrumentalness_min, instrumentalness_max = genre_bornes_selected['instrumentalness']
-            instrumentalness = st.slider('Instrumentalness : ', instrumentalness_min, instrumentalness_max, (instrumentalness_min, instrumentalness_max), step=0.5)
+            instrumentalness = st.slider('Instrumentalness : ', instrumentalness_min, instrumentalness_max)
             liveness_min, liveness_max = genre_bornes_selected['liveness']
-            liveness = st.slider('Liveness : ', liveness_min, liveness_max, (liveness_min, liveness_max), step=0.5)
+            liveness = st.slider('Liveness : ', liveness_min, liveness_max)
             valence_min, valence_max = genre_bornes_selected['valence']
-            valence = st.slider('Valence : ', valence_min, valence_max, (valence_min, valence_max), step=0.5)
+            valence = st.slider('Valence : ', valence_min, valence_max)
             tempo_min, tempo_max = genre_bornes_selected['tempo']
-            tempo = st.slider('Tempo : ', tempo_min, tempo_max, (tempo_min, tempo_max), step=0.5)
+            tempo = st.slider('Tempo : ', tempo_min, tempo_max)
             duration_ms_min, duration_ms_max = genre_bornes_selected['duration_ms']
-            duration_ms = st.slider('Durée : ', duration_ms_min, duration_ms_max,(duration_ms_min, duration_ms_max), step=0.5 )
+            duration_ms = st.slider('Durée : ', duration_ms_min, duration_ms_max)
         submit1 = st.form_submit_button("Submit")
+ 
 
 
 def diffusion_onglet():
