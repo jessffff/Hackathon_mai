@@ -13,6 +13,9 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
+image=Image.open('STARTER_PACK.jpg')
+st.image(image,use_column_width=True)
+
 
 genres=('disco','electro','hiphop','house','pop','jazz','metal','r&b','ragga','rock','classical','country','latin','bossa nova')
 diffusion=('Radio','Online','Vinyles')
