@@ -103,7 +103,7 @@ def diffusion_onglet():
             selected_diffuseur = df_genre_radio[df_genre_radio['genres'].apply(lambda x: genre_input in x)]
 
             if not selected_diffuseur.empty:
-                st.success("Le(s) diffuseur(s) correspondant(s) à la sélection :")
+                st.write("Le(s) diffuseur(s) correspondant(s) à la sélection :")
                 for index, row in selected_diffuseur.iterrows():
                     st.write(index)
             else:
@@ -118,10 +118,8 @@ def diffusion_onglet():
 
         if submit3:
             selected_diffuseur = Avg_Pay_per_Stream.get(moyenne_paiement_input)
-           # st.success('Moyenne de paiement sélectionnée : {}'.format(moyenne_paiement_input))
-
             if selected_diffuseur:
-                st.success("Le diffuseur correspondant à la sélection est : {}".format(selected_diffuseur))
+                st.write("Le diffuseur correspondant à la sélection est : {}".format(selected_diffuseur))
             else:
                 st.warning('Aucun diffuseur correspondant à la sélection.')
                 
@@ -145,100 +143,10 @@ def diffusion_onglet():
             
         if submit4:
             selected_diffuseur = imprimeur_input
-         #   st.success('Imprimeur de vinyles sélectionné : {}'.format(imprimeur_input))
-
             if selected_diffuseur:
-                st.success("L'imprimeur correspondant à la sélection est : {}".format(selected_diffuseur))
+                st.write("L'imprimeur correspondant à la sélection est : {}".format(selected_diffuseur))
             else:
                 st.warning('Aucun imprimeur correspondant à la sélection.')
-
-  
-# =============================================================================
-#      
-# def diffusion_onglet():
-#     st.title("Diffusion de contenu")
-# 
-#     with st.form("form1"):
-#         st.write("Quelle diffusion ?")
-#         online_input = st.selectbox("", diffusion)
-#         submit1 = st.form_submit_button("Next")
-# 
-#     if submit1 and online_input == "Online":
-#         with st.form("form2"):
-#             st.write("\n\nSélectionnez la moyenne de paiement par stream :")
-#             moyenne_paiement_input = st.selectbox("", list(Avg_Pay_per_Stream.keys()))
-#             submit2 = st.form_submit_button("Submit")
-# 
-#             if submit2:
-#                 selected_diffuseur = Avg_Pay_per_Stream.get(moyenne_paiement_input)
-#                 st.success("Moyenne de paiement sélectionnée: {}".format(moyenne_paiement_input))
-# 
-#                 if selected_diffuseur:
-#                     st.success("Le diffuseur correspondant à la sélection est: {}".format(selected_diffuseur))
-#                 else:
-#                     st.warning("Aucun diffuseur correspondant à la sélection.")
-# 
-#     elif submit1 and online_input == "Radio":
-#         with st.form("form3"):
-#             st.write("\n\nQuel genre de musique souhaitez-vous diffuser ?")
-#             genre_input = st.selectbox("", list(genres_radio.keys()))
-#             submit3 = st.form_submit_button("Submit")
-# 
-#             if submit3:
-#                 selected_diffuseur = genres_radio.get(genre_input)
-#                 st.success("Genre musical sélectionné: {}".format(genre_input))
-# 
-#                 if selected_diffuseur:
-#                     st.success("Le diffuseur correspondant à la sélection est: {}".format(selected_diffuseur))
-#                 else:
-#                     st.warning("Aucun diffuseur correspondant à la sélection.")
-# 
-#     elif submit1 and online_input == "Vinyles":
-#         with st.form("form4"):
-#             st.write("\n\nSélectionnez un imprimeur de vinyles :")
-#             imprimeur_input = st.selectbox("", imprimeurs_vinyles)
-#             submit4 = st.form_submit_button("Submit")
-# 
-#             if submit4:
-#                 selected_diffuseur = imprimeur_input
-#                 st.success("Imprimeur de vinyles sélectionné: {}".format(imprimeur_input))
-# 
-#                 if selected_diffuseur:
-#                     st.success("L'imprimeur correspondant à la sélection est: {}".format(selected_diffuseur))
-#                 else:
-#                     st.warning("Aucun imprimeur correspondant à la sélection.")
-# 
-# 
-# =============================================================================
-
-
-# =============================================================================
-#         
-#         if online_input == 'Online':
-#             st.write('\n\nSélectionnez la moyenne de paiement par stream :')
-#             moyenne_paiement_input = st.selectbox('', list(Avg_Pay_per_Stream.keys()))
-#         
-#         submit2 = st.form_submit_button('Submit')
-# 
-#         if submit2:
-#             selected_diffuseur = Avg_Pay_per_Stream.get(moyenne_paiement_input)
-#                        
-#             if selected_diffuseur:
-#                 st.write('Moyenne de paiement sélectionnée :', moyenne_paiement_input)
-#                 st.write("Le diffuseur correspondant à la moyenne de paiement sélectionnée est :", selected_diffuseur)
-#             else:
-#                 st.write('Aucun diffuseur correspondant à la moyenne de paiement sélectionnée.')
-# 
-# 
-# =============================================================================
-
-
-
-
-
-
-
-
 
 
 
