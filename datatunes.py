@@ -2,7 +2,9 @@ import pandas as pd
 import streamlit as st
 import requests
 import toml
-  
+from PIL import Image
+
+
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
