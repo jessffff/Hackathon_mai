@@ -21,7 +21,176 @@ st.image(image,use_column_width=True)
 
 genres=('disco','electro','hiphop','house','pop','jazz','metal','r&b','ragga','rock','classical','country','latin','bossa nova')
 diffusion=('Radio','Online','Vinyles')
-
+genre_bornes = {
+    'disco': {
+        'danceability': (6.0, 10.0),
+        'energy': (6.0, 10.0),
+        'loudness': (-30.0, -10.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 4.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (6.0, 10.0),
+        'tempo': (100.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'electro': {
+        'danceability': (7.0, 10.0),
+        'energy': (7.0, 10.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (2.0, 6.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (6.0, 10.0),
+        'liveness': (4.0, 10.0),
+        'valence': (4.0, 8.0),
+        'tempo': (120.0, 160.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'hiphop': {
+        'danceability': (5.0, 8.0),
+        'energy': (5.0, 8.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (6.0, 10.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (2.0, 8.0),
+        'tempo': (60.0, 100.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'house': {
+        'danceability': (7.0, 10.0),
+        'energy': (7.0, 10.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (2.0, 6.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (6.0, 10.0),
+        'liveness': (4.0, 10.0),
+        'valence': (4.0, 8.0),
+        'tempo': (120.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'pop': {
+        'danceability': (6.0, 9.0),
+        'energy': (4.0, 8.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (6.0, 10.0),
+        'liveness': (4.0, 10.0),
+        'valence': (4.0, 8.0),
+        'tempo': (120.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'jazz': {
+        'danceability': (7.0, 10.0),
+        'energy': (7.0, 10.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (2.0, 6.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (6.0, 10.0),
+        'liveness': (4.0, 10.0),
+        'valence': (4.0, 8.0),
+        'tempo': (120.0, 160.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'metal': {
+        'danceability': (6.0, 10.0),
+        'energy': (6.0, 10.0),
+        'loudness': (-30.0, -10.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 4.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (6.0, 10.0),
+        'tempo': (100.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'r&b': {
+        'danceability': (7.0, 10.0),
+        'energy': (7.0, 10.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (2.0, 6.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (6.0, 10.0),
+        'liveness': (4.0, 10.0),
+        'valence': (4.0, 8.0),
+        'tempo': (120.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'ragga': {
+        'danceability': (6.0, 9.0),
+        'energy': (4.0, 8.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (6.0, 10.0),
+        'liveness': (4.0, 10.0),
+        'valence': (4.0, 8.0),
+        'tempo': (120.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'rock': {
+        'danceability': (6.0, 10.0),
+        'energy': (6.0, 10.0),
+        'loudness': (-30.0, -10.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 4.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (6.0, 10.0),
+        'tempo': (100.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'classical': {
+        'danceability': (6.0, 10.0),
+        'energy': (6.0, 10.0),
+        'loudness': (-30.0, -10.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 4.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (6.0, 10.0),
+        'tempo': (100.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'country': {
+        'danceability': (5.0, 8.0),
+        'energy': (5.0, 8.0),
+        'loudness': (-30.0, -5.0),
+        'speechiness': (6.0, 10.0),
+        'acousticness': (0.0, 6.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (2.0, 8.0),
+        'tempo': (60.0, 100.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'latin': {
+        'danceability': (6.0, 10.0),
+        'energy': (6.0, 10.0),
+        'loudness': (-30.0, -10.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 4.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (6.0, 10.0),
+        'tempo': (100.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    },
+    'bossa nova': {
+        'danceability': (6.0, 10.0),
+        'energy': (6.0, 10.0),
+        'loudness': (-30.0, -10.0),
+        'speechiness': (2.0, 8.0),
+        'acousticness': (0.0, 4.0),
+        'instrumentalness': (0.0, 6.0),
+        'liveness': (4.0, 10.0),
+        'valence': (6.0, 10.0),
+        'tempo': (100.0, 140.0),
+        'duration_ms': (180000.0, 300000.0)
+    } 
+}
 Avg_Pay_per_Stream = {
     0.00154: 'YouTube',
     0.00203: 'Pandora',
@@ -71,21 +240,32 @@ def creation_onglet():
     with st.form("form 1"):
         with col1:
             genre_input = st.selectbox("", genres, format_func=lambda x: x)
+            genre_bornes_selected = genre_bornes[genre_input]
     col1, col2 = st.columns([1,1])
     with st.form("form 2"):
         with col1:
-            danceability = st.slider('Danceability : ', 0.0, 10.0, (3.0, 8.0), step=0.5)
-            energy = st.slider('Energy : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            loudness = st.slider('Loudness : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            speechiness = st.slider('Speechiness : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            acousticness = st.slider('Acousticness : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
+            danceability_min, danceability_max = genre_bornes_selected['danceability']
+            danceability = st.slider('Danceability : ', danceability_min, danceability_max, (danceability_min, danceability_max), step=0.5)
+            energy_min, energy_max = genre_bornes_selected['energy']
+            energy = st.slider('Energy : ', energy_min, energy_max, (energy_min, energy_max), step=0.5)
+            loudness_min, loudness_max = genre_bornes_selected['loudness']
+            loudness = st.slider('Loudness : ', loudness_min, loudness_max, (loudness_min, loudness_max), step=0.5)
+            speechiness_min, speechiness_max = genre_bornes_selected['speechiness']
+            speechiness = st.slider('Speechiness : ', speechiness_min, speechiness_max, (speechiness_min, speechiness_max), step=0.5)
+            acousticness_min, acousticness_max = genre_bornes_selected['acousticness']
+            acousticness = st.slider('Acousticness : ', acousticness_min, acousticness_max, (acousticness_min, acousticness_max), step=0.5)
             st.empty()
         with col2:
-            instrumentalness = st.slider('Instrumentalness : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            liveness = st.slider('Liveness : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            valence = st.slider('Valence : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            tempo = st.slider('Tempo : ', 0.0, 10.0, (0.0, 10.0), step=0.5)
-            duration_ms = st.slider('Durée : ', 0.0, 6.0, (0.0, 6.0), step=0.1)
+            instrumentalness_min, instrumentalness_max = genre_bornes_selected['instrumentalness']
+            instrumentalness = st.slider('Instrumentalness : ', instrumentalness_min, instrumentalness_max, (instrumentalness_min, instrumentalness_max), step=0.5)
+            liveness_min, liveness_max = genre_bornes_selected['liveness']
+            liveness = st.slider('Liveness : ', liveness_min, liveness_max, (liveness_min, liveness_max), step=0.5)
+            valence_min, valence_max = genre_bornes_selected['valence']
+            valence = st.slider('Valence : ', valence_min, valence_max, (valence_min, valence_max), step=0.5)
+            tempo_min, tempo_max = genre_bornes_selected['tempo']
+            tempo = st.slider('Tempo : ', tempo_min, tempo_max, (tempo_min, tempo_max), step=0.5)
+            duration_ms_min, duration_ms_max = genre_bornes_selected['duration_ms']
+            duration_ms = st.slider('Durée : ', duration_ms_min, duration_ms_max,(duration_ms_min, duration_ms_max), step=0.5 )
         submit1 = st.form_submit_button("Submit")
 
 
