@@ -64,7 +64,6 @@ df_genre_radio = pd.DataFrame.from_dict(genre_radio, orient='index', columns=['g
 
 
 
-st.title('_:red[DATATUNES]_')
 
 def creation_onglet():
     st.title("Création de contenu")
