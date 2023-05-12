@@ -135,9 +135,8 @@ def diffusion_onglet():
         submit4 = st.form_submit_button('Submit')
             
         if submit4:
-            selected_diffuseur = imprimeur_input
-            st.write("L'imprimeur correspondant à la sélection est : {}".format(selected_diffuseur))
-
+            selected_diffuseur = imprimeurs_vinyles[imprimeur_input]
+            st.write("Le prix correspondant à l'imprimeur sélectionné est : {}".format(selected_diffuseur))
 
 
 
