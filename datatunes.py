@@ -28,8 +28,8 @@ Avg_Pay_per_Stream = {
     0.00675: 'Apple Music'}
 
 imprimeurs_vinyles = {'Imprimeur' : ['Ovnyl','Conflikarts','Lacontrebande','Creation-vinyle'],
-                      'Price' : ['35 $/U','5,44 $/U pour 1600u','34 $/U','35$'],
-                      'Logos' : [Image.open('ovnyl.png'),Image.open('conflikart.jpg'),Image.open('Lacontrebande.png'), Image.open('Creation_vinyle.png') ]}
+                      'Price' : ['35 $/U','5,44 $/U pour 1600u','34 $/U','35$']}
+#                      'Logos' : [Image.open('ovnyl.png'),Image.open('conflikart.jpg'),Image.open('Lacontrebande.png'), Image.open('Creation_vinyle.png') ]}
   
 data = {'Distributeur': ['Distro kid', 'Tunecore', 'AWAL', 'Ditto', 'CD Baby'],
         'Price': ['20$/year', '30$/year', '15% fee', '19$/year', '5$/album + 9% fee']}
