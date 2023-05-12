@@ -7,7 +7,7 @@ from genres import genre_radio
 from genres import genres
 from Reco import reco
 
-df = pd.read_csv('Dataset_clean_2.csv')
+df = pd.read_csv('dataset_clean_2.csv')
 
 
 st.set_page_config(layout='wide')
@@ -19,17 +19,12 @@ col2.image(image,use_column_width=True)
 
 diffusion=('Radio','Online','Vinyles')
 
-Avg_Pay_per_Stream = {
-    0.00154: 'YouTube',
-    0.00203: 'Pandora',
-    0.00348: 'Spotify',
-    0.00426: 'Amazon Music',
-    0.00562: 'Deezer',
-    0.00675: 'Apple Music'}
+Avg_Pay_per_Stream = {'YouTube': 0.00154, 'Pandora': 0.00203, 'Spotify': 0.00348, 'Amazon Music': 0.00426, 'Deezer': 0.00562, 'Apple Music': 0.00675}
+
 
 imprimeurs_vinyles = {'Imprimeur' : ['Ovnyl','Conflikarts','Lacontrebande','Creation-vinyle'],
-                      'Price' : ['35 $/U','5,44 $/U pour 1600u','34 $/U','35$']}
-#                      'Logos' : [Image.open('ovnyl.png'),Image.open('conflikart.jpg'),Image.open('Lacontrebande.png'), Image.open('Creation_vinyle.png') ]}
+                      'Price' : ['35 $/U','5,44 $/U pour 1600u','34 $/U','35$'],
+                      'Logos' : [Image.open('ovnyl.png'),Image.open('conflikart.jpg'),Image.open('Lacontrebande.png'), Image.open('Creation_vinyle.png') ]}
   
 data = {'Distributeur': ['Distro kid', 'Tunecore', 'AWAL', 'Ditto', 'CD Baby'],
         'Price': ['20$/year', '30$/year', '15% fee', '19$/year', '5$/album + 9% fee']}
@@ -120,17 +115,14 @@ def diffusion_onglet():
     with st.form('form2'):                
         with st.expander("Online"):
             st.markdown(f"<h2 style='text-align: center;'>Online</h2>", unsafe_allow_html=True,)
-            st.subheader('\n\nSélectionnez la moyenne de paiement par stream :')
-            moyenne_paiement_input = st.selectbox('', list(Avg_Pay_per_Stream.keys()))
+            st.subheader('\n\nSélectionnez un diffuseur streaming :')
+            selected_diffuseur = st.selectbox('', list(Avg_Pay_per_Stream.keys()))
         submit3 = st.form_submit_button('Submit')
 
         if submit3:
-            selected_diffuseur = Avg_Pay_per_Stream.get(moyenne_paiement_input)
-            if selected_diffuseur:
-                st.write("Le diffuseur correspondant à la sélection est : {}".format(selected_diffuseur))
-            else:
-                st.warning('Aucun diffuseur correspondant à la sélection.')
-                
+            moyenne_paiement = Avg_Pay_per_Stream.get(selected_diffuseur)
+            st.write("La moyenne des paiements pour ce diffuseur est de : {}".format(moyenne_paiement))
+                         
             if selected_diffuseur == 'Spotify':
                 st.subheader('Liste de distribteurs pour Spotify :')
                 hide_table_row_index = """
@@ -171,6 +163,8 @@ tabs = {
 selection = st.sidebar.radio("Sélectionnez un onglet", list(tabs.keys()))
 
 tabs[selection]()
+
+
 
 
 
