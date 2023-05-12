@@ -97,7 +97,7 @@ genre_bornes = {
         'valence': (0.034, 0.937),
         'tempo': (59.561, 210.164),
         'duration_m': (1.11, 9.88)
-    }
+    },
     'rock': {
         'danceability': (0.120, 0.928),
         'energy': (0.023, 0.993),
