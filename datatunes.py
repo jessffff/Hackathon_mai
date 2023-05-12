@@ -8,7 +8,7 @@ from genres import genre_bornes
 from genres import genre_radio
 from genres import genres
 
-df = pd.read_csv('dataset_clean2.csv')
+df = pd.read_csv('Dataset_clean_2.csv')
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
