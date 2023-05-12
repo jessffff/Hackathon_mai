@@ -117,7 +117,7 @@ def diffusion_onglet():
             st.write("La moyenne des paiements pour ce diffuseur est de : {}".format(moyenne_paiement))
                          
             if selected_diffuseur == 'Spotify':
-                st.subheader('Liste de distribteurs pour Spotify :')
+                st.subheader('Liste de distributeurs pour Spotify :')
                 hide_table_row_index = """
                         <style>
                         thead tr th:first-child {display:none}
