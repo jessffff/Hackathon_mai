@@ -177,7 +177,7 @@ genre_radio = {
     'RMC': 'pop, rock, rap, electro, world, jazz, chanson française',
     'Franceinfo': 'pop, rock, rap, electro, world, jazz, chanson française',
     'RTL': 'pop rock, pop',
-    'NRJ': 'chanson française, dance, dancehall, electro, funk, gangsta rap, hiphop, latino, pop, pop-rock, rap, reggae, reggaeton, r&b, rock, soul, techno, zouk, electro, house, latin',
+    'NRJ': 'chanson française, dance, dancehall, electro, funk, gangsta rap, hiphop, pop, pop rock, rap, reggae, reggaeton, r&b, rock, soul, techno, zouk, electro, house, latin',
     'Nostalgie': 'disco, années 80, années 90, country',
     'FIP': 'jazz, electro, rock, pop, groove',
     'Cherie FM': 'pop rock, pop',
