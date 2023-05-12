@@ -1,6 +1,18 @@
 
 genres=['disco','electro','hiphop','house','pop','jazz','metal','r&b','rock','classical','country','latin','bossa nova']
 
+diffusion=('Radio','Online','Vinyles')
+
+Avg_Pay_per_Stream = {'YouTube': 0.00154, 'Pandora': 0.00203, 'Spotify': 0.00348, 'Amazon Music': 0.00426, 'Deezer': 0.00562, 'Apple Music': 0.00675}
+
+
+imprimeurs_vinyles = {'Imprimeur' : ['Ovnyl','Conflikarts','Lacontrebande','Creation-vinyle'],
+                      'Price' : ['35 $/U','5,44 $/U pour 1600u','34 $/U','35$'],
+                      'Logos' : [Image.open('ovnyl.png'),Image.open('conflikart.jpg'),Image.open('Lacontrebande.png'), Image.open('Creation_vinyle.png') ]}
+  
+data = {'Distributeur': ['Distro kid', 'Tunecore', 'AWAL', 'Ditto', 'CD Baby'],
+        'Price': ['20$/year', '30$/year', '15% fee', '19$/year', '5$/album + 9% fee']}
+
 genre_bornes = {
     'disco': {
         'danceability': (0.532, 0.872),
