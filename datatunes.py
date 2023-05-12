@@ -11,7 +11,7 @@ from genres import data
 from genres import diffusion
 from Reco import reco
 
-df = pd.read_csv('dataset_clean_2.csv')
+df = pd.read_csv('Dataset_clean_2.csv')
 
 
 st.set_page_config(layout='wide')
@@ -136,15 +136,8 @@ def diffusion_onglet():
             
         if submit4:
             selected_diffuseur = imprimeur_input
-            if selected_diffuseur:
-                col1, col2 = st.columns([1,1])
-                #st.write("L'imprimeur correspondant à la sélection est : {}".format(selected_diffuseur))
-                #logo_column = st.columns(1)
-                
-                #col1.image(logo_ovnyl)
-                st.write("L'imprimeur correspondant à la sélection est : {}".format(selected_diffuseur))
-            else:
-                st.warning('Aucun imprimeur correspondant à la sélection.')
+            st.write("L'imprimeur correspondant à la sélection est : {}".format(selected_diffuseur))
+
 
 
 
