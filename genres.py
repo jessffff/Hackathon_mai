@@ -185,7 +185,7 @@ genre_radio = {
     'France Culture': 'classique, chanson française',
     'RTL2': 'pop rock, rock',
     'Radio Classique': 'classical, bossa nova',
-    'Fun Radio': 'electro, dance, Techno, house, latin',
+    'Fun Radio': 'electro, dance, techno, house, latin',
     'Rire et Chansons': 'pop rock, chanson française, rock',
     'Sud Radio': 'pop rock, pop, chanson française',
     'Radio Orient': 'chanson arabe',
