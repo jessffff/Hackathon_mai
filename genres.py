@@ -1,5 +1,6 @@
 
-genres=['disco','electro','hiphop','house','pop','jazz','metal','r&b','ragga','rock','classical','country','latin','bossa nova']
+genres=['bossa nova','classical', 'country','disco','electro','hiphop','house','jazz','latin','metal','pop','r&b','ragga','rock']
+
 
 genre_bornes = {
     'disco': {
