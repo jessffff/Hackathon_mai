@@ -1,12 +1,11 @@
 #
 import pandas as pd
 import streamlit as st
-import requests
-import toml
 from PIL import Image  
 from genres import genre_bornes
 from genres import genre_radio
 from genres import genres
+from Reco import reco
 
 df = pd.read_csv('Dataset_clean_2.csv')
 hide_st_style = """
