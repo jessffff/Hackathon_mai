@@ -9,17 +9,7 @@ from Reco import reco
 
 df = pd.read_csv('dataset_clean_2.csv')
 
-# =============================================================================
-# hide_st_style = """
-#             <style>
-#             #MainMenu {visibility: hidden;}
-#             footer {visibility: hidden;}
-#             header {visibility: hidden;}
-#             </style>
-#             """
-# st.markdown(hide_st_style, unsafe_allow_html=True)
-# 
-# =============================================================================
+
 st.set_page_config(layout='wide')
 
 image=Image.open('STARTER.png')
@@ -181,5 +171,6 @@ tabs = {
 selection = st.sidebar.radio("Sélectionnez un onglet", list(tabs.keys()))
 
 tabs[selection]()
+
 
 
