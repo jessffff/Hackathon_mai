@@ -1,4 +1,4 @@
-Unnamed: 0,id_artists,name_artists_df,id_tracks_df,name_tracks_df,duration_m,genre,popularity_tracks_df,release_year,popularity_artists_df,followers,duration_ms,danceability,energy,loudness,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature
+Unnamed: 0,id_artists,Name artist,id_tracks_df,Name Track,Duration,genre,Popularity,Release Year,popularity_artists_df,followers,duration_ms,danceability,energy,loudness,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature
 0,74XFHRwlV6OrjEM0A2NCMF,Paramore,04BSvYghzdxjSJNpee36er,Monster - Transformers Soundtrack Version,3.34,pop,61,2011,81.0,5921571.0,200147,0.413,0.969,-2.599,0.119,2.87e-05,0.000753,0.371,0.374,164.999,4
 1,3x621ItlHMtX7mrJ8QnEjM,HY,22aZD7yaGYfhgCYazL4nbc,366日,5.88,pop,61,2008,56.0,902389.0,352507,0.378,0.426,-7.314,0.0308,0.675,0.0,0.207,0.184,152.03,4
 2,6oBm8HB0yfrIc9IHbxs6in,Lykke Li,39Odj4vLKRarATkCA31gaW,Possibility,5.11,pop,61,2009,72.0,1484200.0,306440,0.285,0.311,-10.012,0.032,0.768,0.00183,0.0809,0.0772,117.813,4
