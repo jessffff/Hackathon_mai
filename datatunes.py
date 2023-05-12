@@ -11,7 +11,7 @@ from genres import data
 from genres import diffusion
 from Reco import reco
 
-df = pd.read_csv('Dataset_clean_2.csv')
+df = pd.read_csv('Dataset_clean_3.csv')
 
 
 st.set_page_config(layout='wide')
