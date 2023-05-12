@@ -175,7 +175,7 @@ genre_bornes = {
 
 
 genre_radio = {
-    'France Inter': 'années 80, pop musique, rap, jazz, chanson française, rock',
+    'France Inter': 'années 80, pop, rap, jazz, chanson française, rock',
     'RMC': 'pop, rock, rap, electro, world, jazz, chanson française',
     'Franceinfo': 'pop, rock, rap, electro, world, jazz, chanson française',
     'RTL': 'pop rock, pop',
