@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-df = pd.read_csv('dataset_clean_2.csv')
+df = pd.read_csv('Dataset_clean_2.csv')
 
 
 df = df.drop(columns = ['Unnamed: 0','id_artists','id_artists','id_tracks_df','popularity_artists_df','followers','time_signature',"duration_ms"])
