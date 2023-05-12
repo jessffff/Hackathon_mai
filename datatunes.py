@@ -8,6 +8,7 @@ from genres import genre_bornes
 from genres import genre_radio
 from genres import genres
 
+df = pd.read_csv('dataset_clean.csv')
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -75,10 +76,21 @@ def creation_onglet():
             valence = st.slider('Valence : ', valence_min, valence_max)
             tempo_min, tempo_max = genre_bornes_selected['tempo']
             tempo = st.slider('Tempo : ', tempo_min, tempo_max)
-            duration_ms_min, duration_ms_max = genre_bornes_selected['duration_ms']
-            duration_ms = st.slider('Durée : ', duration_ms_min, duration_ms_max)
+            #duration_ms_min, duration_ms_max = genre_bornes_selected['duration_ms']
+            #duration_ms = st.slider('Durée : ', duration_ms_min, duration_ms_max)
         submit1 = st.form_submit_button("Submit")
-
+        if submit1:
+            features = [danceability,energy,loudness,speechiness,acousticness,instrumentalness,liveness,valence,tempo]
+            recommandation=reco(df,genre_input,features)
+            st.subheader('Recommandations :')
+            hide_table_row_index = """
+                   <style>
+                   thead tr th:first-child {display:none}
+                   tbody th {display:none}
+                   </style>
+                   """
+            st.markdown(hide_table_row_index, unsafe_allow_html=True)
+            st.table(recommandation)
 
 def diffusion_onglet():
     st.title("Diffusion de contenu")
