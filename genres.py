@@ -6,10 +6,8 @@ diffusion=('Radio','Online','Vinyles')
 Avg_Pay_per_Stream = {'YouTube': 0.00154, 'Pandora': 0.00203, 'Spotify': 0.00348, 'Amazon Music': 0.00426, 'Deezer': 0.00562, 'Apple Music': 0.00675}
 
 
-imprimeurs_vinyles = {'Imprimeur' : ['Ovnyl','Conflikarts','Lacontrebande','Creation-vinyle'],
-                      'Price' : ['35 $/U','5,44 $/U pour 1600u','34 $/U','35$']}
-          #            'Logos' : [Image.open('ovnyl.png'),Image.open('conflikart.jpg'),Image.open('Lacontrebande.png'), Image.open('Creation_vinyle.png') ]}
-  
+imprimeurs_vinyles = {'Ovnyl': '35 $/U', 'Conflikarts': '5,44 $/U pour 1600u', 'Lacontrebande': '34 $/U', 'Creation-vinyle': '35$'}                     
+
 data = {'Distributeur': ['Distro kid', 'Tunecore', 'AWAL', 'Ditto', 'CD Baby'],
         'Price': ['20$/year', '30$/year', '15% fee', '19$/year', '5$/album + 9% fee']}
 
