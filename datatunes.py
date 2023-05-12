@@ -91,7 +91,9 @@ def diffusion_onglet():
         with st.expander("Radio"):
             st.markdown(f"<h2 style='text-align: center;'>Radio</h2>", unsafe_allow_html=True,)
             st.subheader('\n\nQuel genre de musique souhaitez-vous diffuser ?')
-            genre_input = st.selectbox('', list(set([genre.strip() for genres in df_genre_radio['genres'] for genre in genres.split(",")])))
+            genre_list = list(set([genre.strip() for genres in df_genre_radio['genres'] for genre in genres.split(",")]))
+            sorted_genre_list = sorted(genre_list)
+            genre_input = st.selectbox('', sorted_genre_list)
 
         submit2 = st.form_submit_button('Submit')
 
