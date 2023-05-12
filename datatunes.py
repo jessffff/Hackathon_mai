@@ -7,7 +7,7 @@ from genres import genre_radio
 from genres import genres
 from Reco import reco
 
-df = pd.read_csv('dataset_clean_2.csv')
+df = pd.read_csv('Dataset_clean_2.csv')
 
 
 st.set_page_config(layout='wide')
